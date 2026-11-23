@@ -1,0 +1,41 @@
+/* Resume Analytics: compact docked panel theme (overrides the original Resume Optimiser styles) */
+:root{--ink:#16232b;--paper:#f5f7f8;--panel:#fff;--rule:#e3e8ea;--mute:#667780;--acc:#0f766e;--accs:#e1f2ef;--ok:#15803d;--oks:#e3f4e8;--warn:#b45309;--warns:#fdf0dc;--bad:#c2410c;--bads:#fde8e1;--track:#e6ebed;--focus:#0f766e;--mark:#fff2b8;--sh:none}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#e4eef0;--paper:#0f1a1e;--panel:#162329;--rule:#26373e;--mute:#8fa4ac;--acc:#4fd1c0;--accs:#17383a;--ok:#5fd38d;--oks:#143222;--warn:#f0b35c;--warns:#3a2a12;--bad:#ff9a73;--bads:#3c1f16;--track:#26373e;--focus:#4fd1c0;--mark:#5a4a12}}
+html,body{height:100%}
+body{font:12.5px/1.45 -apple-system,"Segoe UI",Inter,system-ui,sans-serif;background:var(--paper);color:var(--ink)}
+.panel{padding:10px 12px 14px;min-height:100%}
+h1{font-size:14px;margin:0;line-height:1.2}h2{font-size:10.5px;margin:14px 0 6px;letter-spacing:.07em}
+.mute{font-size:11.5px}.ell{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.top{display:flex;align-items:center;gap:9px;margin-bottom:8px}
+.ttl{flex:1;min-width:0}
+.logo{width:26px;height:26px;border-radius:8px;font-size:13px;flex:none;background:linear-gradient(135deg,#0f766e,#22c1a7)}
+button{font-size:12px;padding:6px 11px;border-radius:8px;font-weight:600}
+button.p{background:var(--acc);border-color:var(--acc);color:#fff}[data-theme="dark"] button.p{color:#0f1a1e}
+@media(prefers-color-scheme:dark){button.p{color:#0f1a1e}}
+button.sm{padding:4px 9px;font-size:11.5px}
+.ic{width:26px;height:26px;padding:0;border:0;background:transparent;color:var(--mute);font-size:14px;border-radius:7px}.ic:hover{background:var(--track);color:var(--ink)}
+.lnk{border:0;background:none;color:var(--acc);padding:0;font-size:11.5px;font-weight:600;cursor:pointer}
+.meta{gap:7px;margin-bottom:8px}
+.pill{font-size:11px;padding:1px 8px}
+.card{border-radius:10px;box-shadow:none}
+.inputs>summary{padding:8px 10px;gap:8px}.sumt{font-size:12px}.edit{font-size:11.5px}
+.ig{padding:0 10px 10px}.in{padding:8px;border-radius:8px}
+textarea{height:150px;font:11.5px/1.4 ui-monospace,Consolas,monospace;margin-top:4px}
+input[type=file]{font-size:11px;max-width:100%}
+.acts{display:flex;gap:6px;margin:10px 0 4px}.acts button{flex:1;padding:8px 6px}
+#status{font-size:11.5px;margin-top:6px;min-height:0}
+.tabs{position:sticky;top:0;z-index:3;margin:10px 0 8px;padding:3px;border-radius:9px}
+.tabs button{font-size:11.5px;padding:5px 4px}
+.bar{display:none;gap:6px;margin:0 0 8px;flex-wrap:wrap}.bar.on{display:flex}
+.hero{padding:12px;gap:12px;margin-top:4px;border-radius:10px;box-shadow:none}
+.ring{--s:44px;--i:5px}.ring.xl{--s:64px;--i:7px}.ring.xl span{font-size:18px}
+.verdict{padding:9px 11px;margin:8px 0;font-size:12px;border-radius:9px}
+.fac{margin:6px 0;border-radius:10px}.fac>summary{padding:9px 10px;gap:9px}.fac h3{font-size:12.5px}.fac .rs{font-size:11.5px;-webkit-line-clamp:2}
+.fb{padding:0 10px 10px}.it{font-size:11.5px;padding:5px 8px}.grp{font-size:10.5px}
+.sec{padding:11px;margin:8px 0;border-radius:10px;box-shadow:none}.sec>h3{font-size:13px}
+.txt{font-size:12px}.why2{font-size:11.5px}
+.empty{margin:4vh auto;max-width:30ch}.empty b{font-size:13px}
+.stat{min-width:90px}.big{font-size:28px}
+table{font-size:11.5px}
+.foot{margin-top:14px;text-align:center}
+.nbtn{font-size:11px}
