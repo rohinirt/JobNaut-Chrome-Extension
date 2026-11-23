@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jobnaut Resume Analytics</title>
+<link rel="stylesheet" href="panel-base.css">
+<link rel="stylesheet" href="panel.css">
+</head>
+<body>
+<main class="panel">
+  <header class="top">
+    <div class="logo">J</div>
+    <div class="ttl"><h1>Resume Analytics</h1><div class="mute ell" id="jobline">Open a job page, then analyse the match.</div></div>
+    <button type="button" class="ic" id="sz" title="Make taller / shorter">⤢</button>
+    <button type="button" class="ic" id="cl" title="Close">✕</button>
+  </header>
+
+  <div class="meta row">
+    <span class="mute">Resume</span><span class="pill" id="rpill"><span id="rname">No resume yet</span></span>
+    <button type="button" class="lnk" id="rrep">Replace</button>
+    <input id="fr" type="file" accept=".docx" hidden>
+  </div>
+
+  <details id="jdbox" class="card inputs">
+    <summary><span class="sumt">Job description</span><span id="jdsum" class="pill">Not captured yet</span><span class="edit"></span></summary>
+    <div class="ig"><div class="in">
+      <div class="mute" style="margin-bottom:6px">Captured from the page. To use only part of it, select that text on the job page and press Re-read.</div>
+      <div class="row" style="margin-bottom:6px"><button type="button" class="sm" id="rj">↻ Re-read</button><input id="fj" type="file" accept=".docx,.txt,.md"></div>
+      <textarea id="jd" placeholder="No job description captured yet"></textarea>
+    </div></div>
+  </details>
+
+  <div class="acts"><button id="bs" class="p">Analyse match</button><button id="br" disabled>Rewrite my resume</button></div>
+  <div id="notecount" class="mute"></div>
+  <div id="status" role="status"></div><div id="notice" class="mute"></div>
+
+  <div class="tabs" role="tablist"><button class="on" data-t="an">Analysis</button><button data-t="res">Rewrite</button><button data-t="kw">Keywords</button></div>
+  <div class="bar" id="bar"><button class="p sm" id="ap" disabled>Use on this application</button><button id="dd" class="sm" disabled>.docx</button><button id="dp" class="sm" disabled>PDF</button></div>
+
+  <div id="results">
+    <div id="t-an"><div id="an"><div class="empty"><b>No analysis yet</b><p class="mute">Press “Analyse match” to score your resume against this job.</p></div></div></div>
+    <div id="t-res" hidden></div>
+    <div id="t-chg" hidden></div><div id="t-kw" hidden></div>
+  </div>
+  <footer class="foot"><button type="button" class="lnk" id="cfgbtn">Prefill your Info</button></footer>
+
+  <!-- Kept hidden: the original Resume Optimiser logic reads these. Real inputs live in Prefill your Info; the AI key lives in config.js. -->
+  <div id="cfg" hidden>
+    <details id="aiset"><summary><span id="keyst"></span></summary>
+      <select id="gp"><option value="gemini">Gemini</option><option value="mistral">Mistral</option><option value="cerebras">Cerebras</option><option value="openrouter">OpenRouter</option></select>
+      <div id="keybox"><label id="gkl" for="gk"></label><input id="gk"></div>
+      <select id="gm"></select><button id="gr" type="button"></button><span id="gs"></span><p id="gnote"></p>
+    </details>
+    <details id="inp" open><summary><span id="chips"></span></summary>
+      <input id="fu" type="file"><textarea id="up"></textarea>
+      <input id="fp" type="file"><textarea id="pj"></textarea>
+    </details>
+  </div>
+</main>
+<script src="vendor/jszip.min.js"></script>
+<script src="vendor/jspdf.umd.min.js"></script>
+<script src="config.js"></script>
+<script src="fields.js"></script>
+<script src="lab-ai.js"></script>
+<script src="lab-engine.js"></script>
+<script src="panel-app.js"></script>
+<script src="panel-ext.js"></script>
+</body>
+</html>
