@@ -17,5 +17,3 @@ Chrome extension (Manifest V3) that autofills job applications from your saved i
 - Docks inside the current tab (top right, below the URL bar). Each tab has its own panel and only analyses that tab's job description.
 - Stays open when you click the page. ✕ hides it, ⤢ makes it taller.
 - Results are cached per job description + resume.
-
-Delete `offscreen.html` and `offscreen.js` if you have them from an earlier version.
